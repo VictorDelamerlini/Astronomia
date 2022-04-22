@@ -1,0 +1,69 @@
+<!--Kauã(turma A), Lucas(turma B), Renan(turma A) e Victor(turma B) - 2° TII-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<title>My Universe</title>
+</head>
+<body>
+	<div class="container">
+		<div class="menu">
+			<p>Categorias:</p>
+    		<div id="geral">Geral</div>
+    		<div id="estrelas">Estrelas</div>
+    		<div id="planetas">Planetas</div>
+    		<div id="luas">Luas</div>
+    		<div id="asteroides">Asteroides</div>
+    		<div id="sondas">Sondas</div>
+    		<form>
+    			<p>Formulário:</p>
+				<label>Nome do astro</label>
+	            <input type="text" name="nome" required><br>
+	            <label>Descrição</label>
+	            <input type="text" required name="text"><br>
+	            <label>Raio</label>
+           		<input type="number" name="raio" max="60" min="1" required><br>
+           		<label>Anéis</label>
+            	<input type="checkbox" name="anel"><br>
+            	<label>Posição X</label>
+            	<input type="number" max="1000" min="0" name="X" required><br>
+            	<label>Posição Y</label>
+            	<input type="number" max="1000" min="0" name="Y" required><br>
+        		<button type="submit">Enviar</button>
+			</form>
+			<p class="text">
+    			A categorização é automática, de acordo com o raio.
+    			Estrelas: 60 > Raio >= 30; Planetas: 20 >= Raio >= 10;
+    			Luas: 10 > Raio >= 5; Asteroides: 5 > Raio >= 3;
+    			Sondas: 3 > Raio >= 1.
+    		</p>
+		</div>
+		<div class="screen">
+			<h1>My Universe</h1>
+			<h2>Movimente a tela e explore o universo!</h2>
+			<div class="scroll">
+				<canvas id="canvas"></canvas>
+			</div>
+			<p>Tela: 600px X 600px</p>
+			<p>Máx: 1000px X 1000px</p>
+			<footer>
+				<div text-align: center;>Copyright©: Kauã, Lucas H, Renan e Victor<div>
+        		<script> 
+            		now = new Date
+            		now = new Date
+            		document.write ("Data de Acesso: " + now.getDate() + "/" + "0" + (now.getMonth() + 1) + "/" + now.getFullYear()) 
+        		</script>
+			</footer>
+		</div>
+		<div class="list">
+			<p>Itens na categoria:</p>
+			<ul type="none"></ul>
+		</div>
+	</div>
+	<script src="scripts/draw.js"></script>
+	<script src="scripts/create.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
